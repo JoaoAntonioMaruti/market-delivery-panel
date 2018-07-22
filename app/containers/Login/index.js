@@ -8,6 +8,11 @@ import injectSaga from 'utils/injectSaga';
 import reducer from './reducer';
 import saga from './saga';
 
+import Input from "components/Input";
+import { Container } from "components/Container";
+import { LoginBox, LoginContainer } from './styles';
+import Button from '../../components/Button';
+
 /* eslint-disable react/prefer-stateless-function */
 export class LoginPage extends React.PureComponent {
   constructor(props) {
@@ -15,11 +20,16 @@ export class LoginPage extends React.PureComponent {
   }
 
   render() {
-
     return (
-      <div>
-        <h1>Login page</h1>
-      </div>
+      <Container>
+        <LoginContainer>
+          <LoginBox>
+            <Input placeholder={'Usuário'} label={'Usuário'} type={'text'} />
+            <Input placeholder={'Senha'} label={'Senha'} type={'password'}/>
+            <Button title={'Entrar'} onClick={() => alert('click') }/>
+          </LoginBox>
+        </LoginContainer>
+      </Container>
     );
   }
 }
@@ -41,8 +51,8 @@ const withConnect = connect(
   mapDispatchToProps,
 );
 
-const withReducer = injectReducer({ key: 'home', reducer });
-const withSaga = injectSaga({ key: 'home', saga });
+const withReducer = injectReducer({ key: 'login', reducer });
+const withSaga = injectSaga({ key: 'login', saga });
 
 export default compose(
   withReducer,
