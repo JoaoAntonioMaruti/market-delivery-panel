@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
-import LoginPage from './../../containers/Login';
+import LoginPage from 'containers/Login';
+import DashboradPage from 'containers/Dashboard';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
@@ -22,6 +23,7 @@ export default function App() {
       </Helmet>
       <Switch>
         <Route exact path="/" component={LoginPage} />
+        <Route exact path="/dashboard" component={DashboradPage} />
         <Route path="/features" component={FeaturePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
