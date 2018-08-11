@@ -9,6 +9,7 @@ const ButtonStyled = styled.button`
   text-transform:uppercase;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   background:#FFFFFF;
+  cursor:pointer;
   &:active, &:focus, &:hover {
     outline: none;
     background:#232323;
