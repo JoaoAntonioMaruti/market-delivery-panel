@@ -8,6 +8,11 @@ import injectSaga from 'utils/injectSaga';
 import reducer from './reducer';
 import saga from './saga';
 
+import { CadastroBox } from './styles';
+// componnets
+import Input from "components/Input";
+import Checkbox from "components/Checkbox";
+
 /* eslint-disable react/prefer-stateless-function */
 export class Marca extends React.PureComponent {
   constructor(props) {
@@ -15,7 +20,17 @@ export class Marca extends React.PureComponent {
   }
 
   render() {
-    return <div />;
+    return (
+      <CadastroBox>
+        <div style={ { display: 'flex' } }>
+          <Input  style={{ width: 80 }} placeholder={'id'} label={'id'} type={'text'} />
+          <Input placeholder={'Descrição'} label={'Descrição'} type={'text'} />
+        </div>
+        <div>
+          <Checkbox label={'Situação'} checked={true} />
+        </div>
+      </CadastroBox>
+    );
   }
 }
 
