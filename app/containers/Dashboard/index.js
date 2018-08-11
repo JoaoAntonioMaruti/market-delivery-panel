@@ -8,7 +8,7 @@ import injectSaga from 'utils/injectSaga';
 import reducer from './reducer';
 import saga from './saga';
 
-import { Container } from "components/Container";
+import { Container } from 'components/Container';
 import Section from 'components/Section';
 import { SectionsContainer, DashboardHeader } from './styles';
 
@@ -21,82 +21,90 @@ export class DashboardPage extends React.PureComponent {
   render() {
     const sections = [
       {
-        name:'Marca',
-        icon:require('assets/icon-registred.png'),
-        options:[
+        name: 'Marca',
+        icon: require('assets/icon-registred.png'),
+        options: [
           {
-            name:'Nova',
-            action:() => {}
+            name: 'Nova',
+            to: 'marca',
           },
           {
-            name:'Marcas',
-            action:() => {}
-          }
-        ]
+            name: 'Marcas',
+            to: 'marca',
+          },
+        ],
       },
       {
-        name:'Tag',
-        icon:require('assets/icon-tag.png'),
-        options:[
+        name: 'Tag',
+        icon: require('assets/icon-tag.png'),
+        options: [
           {
-            name:'Nova',
-            action:() => {}
+            name: 'Nova',
+            to: 'tag',
           },
           {
-            name:'Tags',
-            action:() => {}
-          }
-        ]
+            name: 'Tags',
+            to: 'tag',
+          },
+        ],
       },
       {
-        name:'Propriedade',
-        icon:'',
-        options:[
+        name: 'Propriedade',
+        icon: '',
+        options: [
           {
-            name:'Nova',
-            action:() => {}
+            name: 'Nova',
+            to: 'propriedade',
           },
           {
-            name:'Propriedades',
-            action:() => alert('Propriedades')
-          }
-        ]
-      }
+            name: 'Propriedades',
+            to: 'propriedade',
+          },
+        ],
+      },
+      {
+        name: 'Produtos',
+        icon: '',
+        options: [
+          {
+            name: 'Produto',
+            to: 'produto',
+          },
+          {
+            name: 'Produtos',
+            to: 'produto',
+          },
+        ],
+      },
     ];
 
     return (
       <Container>
-        <DashboardHeader> { 'Bem vindo Mercado do João' } </DashboardHeader>
+        <DashboardHeader> {'Bem vindo Mercado do João'} </DashboardHeader>
         <SectionsContainer>
-          {
-            sections.map((section, key) => {
-              return (
-                <Section
-                  key={key}
-                  name={section.name}
-                  icon={section.icon}
-                  options={section.options}
-                />
-              );
-            })
-          }
+          {sections.map((section, key) => {
+            return (
+              <Section
+                key={key}
+                name={section.name}
+                icon={section.icon}
+                options={section.options}
+              />
+            );
+          })}
         </SectionsContainer>
       </Container>
     );
   }
 }
 
-DashboardPage.propTypes = {
-
-};
+DashboardPage.propTypes = {};
 
 export function mapDispatchToProps(dispatch) {
   return {};
 }
 
-const mapStateToProps = createStructuredSelector({
-
-});
+const mapStateToProps = createStructuredSelector({});
 
 const withConnect = connect(
   mapStateToProps,
