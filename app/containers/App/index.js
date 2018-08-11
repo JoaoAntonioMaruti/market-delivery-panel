@@ -9,7 +9,7 @@ import DespesaPage from 'containers/Despesa';
 import ProdutoPage from 'containers/Produto';
 import PropriedadePage from 'containers/Propriedade';
 import TagPage from 'containers/Tag';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import UsuarioPage from 'containers/Usuario';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 const AppWrapper = styled.div`
@@ -29,6 +29,7 @@ export default function App() {
         <Route exact path="/" component={LoginPage} />
         <Route exact path="/dashboard" component={DashboradPage} />
         <Route path="/despesa" component={DespesaPage} />
+        <Route path="/usuario" component={UsuarioPage} />
         <Route path="/tag" component={TagPage} />
         <Route path="/propriedade" component={PropriedadePage} />
         <Route path="/produto" component={ProdutoPage} />
