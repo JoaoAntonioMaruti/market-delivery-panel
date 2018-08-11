@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+`;
+
 const CadastroBox = styled.div`
   width: 600px;
   background: #fff;
@@ -8,5 +15,8 @@ const CadastroBox = styled.div`
   border-radius: 2px;
   background: #e5e5e5;
 `;
+const ButtonContainer = styled.div`
+  margin-top: 20px;
+`;
 
-export { CadastroBox };
+export { CadastroBox, ButtonContainer, Container };

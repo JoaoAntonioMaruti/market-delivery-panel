@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import LoginPage from 'containers/Login';
 import DashboradPage from 'containers/Dashboard';
-import MarcaPage from 'containers/Marca';
+import DespesaPage from 'containers/Despesa';
 import ProdutoPage from 'containers/Produto';
 import PropriedadePage from 'containers/Propriedade';
 import TagPage from 'containers/Tag';
@@ -28,8 +28,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={LoginPage} />
         <Route exact path="/dashboard" component={DashboradPage} />
-        <Route path="/features" component={FeaturePage} />
-        <Route path="/marca" component={MarcaPage} />
+        <Route path="/despesa" component={DespesaPage} />
         <Route path="/tag" component={TagPage} />
         <Route path="/propriedade" component={PropriedadePage} />
         <Route path="/produto" component={ProdutoPage} />
