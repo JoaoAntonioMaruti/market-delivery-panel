@@ -1,0 +1,167 @@
+Fazer Login Mercado
+curl --request POST \
+  --url http://localhost:8765/v1/mercado/usuarios-mercado/login \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZW1haWwuY29tIiwiZXhwIjoxNTMyNjU2NTAyfQ.aI1olpHUsQvyo436fp_27EwUMigLtJUgeHpLVcwO6PQ' \
+  --header 'content-type: application/json' \
+  --cookie CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj \
+  --data '{
+	"login":"joao@email.com",
+	"senha":"123"
+}'
+
+Cadastrar Tag
+curl --request POST \
+  --url http://localhost:8765/v1/mercado/tags \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie 'CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --data '{
+	"descricao":"Nova tag",
+	"situacao": 1
+}'
+
+Cadastrar Propriedade
+curl --request POST \
+  --url http://localhost:8765/v1/mercado/propriedades \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie 'CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --data '{
+	"descricao":"Nova propriedade",
+	"situacao": 1
+}'
+
+Cadastrar Marca
+curl --request POST \
+  --url http://localhost:8765/v1/mercado/marcas \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie 'CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --data '{
+	"descricao":"Nova marca",
+	"situacao": 1
+}'
+
+
+Editar Propriedade
+curl --request PUT \
+  --url http://localhost:8765/v1/mercado/propriedades/1 \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie 'CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --data '{
+	"descricao":"Editando propriedade",
+	"situacao": 1
+}'
+
+Editar Marca
+curl --request PUT \
+  --url http://localhost:8765/v1/mercado/marcas/1 \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie 'CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --data '{
+	"descricao":"editando marca",
+	"situacao": 1
+}'
+
+Editar Tag
+curl --request PUT \
+  --url http://localhost:8765/v1/mercado/tags/1 \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie 'CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --data '{
+	"descricao":"Editando Tag",
+	"situacao": 1
+}'
+
+Buscar Tag
+curl --request GET \
+  --url http://localhost:8765/v1/mercado/tags/1 \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj
+
+Buscar Propriedade
+curl --request GET \
+  --url http://localhost:8765/v1/mercado/propriedades/1 \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj
+
+Buscar Marca
+curl --request GET \
+  --url http://localhost:8765/v1/mercado/marcas/1 \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj
+
+Buscar Tags
+curl --request GET \
+  --url http://localhost:8765/v1/mercado/tags \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj
+
+Buscar Propriedades
+curl --request GET \
+  --url http://localhost:8765/v1/mercado/propriedades \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj
+
+Buscar Marcas
+curl --request GET \
+  --url http://localhost:8765/v1/mercado/marcas \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJndWlAZ3VpLmNvbSIsImV4cCI6MTUzMjgwMDEzMn0.CjwWTLWdhebaSKcYU443Fo9uJghNXv3kfDX2WWmUcws' \
+  --header 'content-type: application/json' \
+  --cookie CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj
+
+Cadastro de produtos
+curl --request POST \
+  --url http://localhost:8765/v1/mercado/produtos \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvQGVtYWlsLmNvbSIsImV4cCI6MTUzMzU5ODg3OX0.NTDeoghRSNnTNmY05fVTRa8bLe2XQzO2ZZSMGUogVuM' \
+  --header 'content-type: application/json' \
+  --header 'cookie: CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --cookie 'CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj; CAKEPHP=olnjoflhkg4s0pl7mkqus9r9rj' \
+  --data '{
+	"descricao":"Novo Produto",
+	"idmarca": 1,
+	"codigo_barras": 15215245,
+	"produto_mercado_estoque":[{
+		"valor": 10
+	}],
+	"produto_mercado_situacao":[{
+		"situacao": 1
+	}],
+	"produto_mercado_valor":[{
+		"valor": 10.50
+	}],
+	"produto_propriedade":[
+		{
+			"idpropriedade": 1,
+			"valor": 10
+		},
+		{
+			"idpropriedade": 2,
+			"valor": 10
+		}
+	],
+	"produto_tag":[
+		{
+			"idtag": 1
+		}
+	]
+}'

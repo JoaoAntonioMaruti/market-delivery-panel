@@ -22,15 +22,45 @@ export class DashboardPage extends React.PureComponent {
     const sections = [
       {
         name:'Marca',
-        icon:require('assets/icon-registred.png')
+        icon:require('assets/icon-registred.png'),
+        options:[
+          {
+            name:'Nova',
+            action:() => {}
+          },
+          {
+            name:'Marcas',
+            action:() => {}
+          }
+        ]
       },
       {
         name:'Tag',
-        icon:require('assets/icon-tag.png')
+        icon:require('assets/icon-tag.png'),
+        options:[
+          {
+            name:'Nova',
+            action:() => {}
+          },
+          {
+            name:'Tags',
+            action:() => {}
+          }
+        ]
       },
       {
         name:'Propriedade',
-        icon:''
+        icon:'',
+        options:[
+          {
+            name:'Nova',
+            action:() => {}
+          },
+          {
+            name:'Propriedades',
+            action:() => alert('Propriedades')
+          }
+        ]
       }
     ];
 
@@ -45,6 +75,7 @@ export class DashboardPage extends React.PureComponent {
                   key={key}
                   name={section.name}
                   icon={section.icon}
+                  options={section.options}
                 />
               );
             })
