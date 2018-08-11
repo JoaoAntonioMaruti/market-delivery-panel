@@ -17,6 +17,9 @@ import Button from 'components/Button';
 export class Usuario extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      status: 1,
+    };
   }
 
   handleChange(event) {
@@ -33,38 +36,29 @@ export class Usuario extends React.PureComponent {
       <Container>
         <CadastroBox>
           <Input
-            placeholder={'Data'}
+            placeholder={'Nome'}
             onChange={event => this.handleChange(event)}
-            name={'data'}
-            label={'Data'}
-            type={'date'}
-          />
-          <Input
-            placeholder={'Titulo'}
-            onChange={event => this.handleChange(event)}
-            name={'titulo'}
-            label={'Titulo'}
+            name={'nome'}
+            label={'Nome'}
             type={'text'}
           />
           <Input
-            placeholder={'Descrição'}
-            name={'descricao'}
+            placeholder={'Nome de usuário'}
+            name={'login'}
             onChange={event => this.handleChange(event)}
-            label={'Descrição'}
+            label={'Nome de usuário'}
             type={'text'}
           />
           <Input
-            placeholder={'Valor'}
-            name={'valor'}
+            placeholder={'Senha'}
+            name={'senha'}
             onChange={event => this.handleChange(event)}
-            label={'Valor'}
-            min={0.1}
-            type={'number'}
+            label={'Senha'}
+            type={'password'}
           />
-          <Checkbox name={'status'} label={'Pago'} checked={false} />
 
           <ButtonContainer>
-            <Button title={'Lançar'} onClick={() => this.submit()} />
+            <Button title={'Cadastrar'} onClick={() => this.submit()} />
           </ButtonContainer>
         </CadastroBox>
       </Container>
