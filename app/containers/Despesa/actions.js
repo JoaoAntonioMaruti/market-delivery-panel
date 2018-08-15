@@ -11,7 +11,7 @@ export function saveOrUpdateExpense(expense) {
   delete expense.id;
 
   let body = JSON.stringify(expense);
-  const method = `/v1/despesas/${id ? id : ''}`;
+  const method = `/v1/despesas${id ? `/${id}` : ''}`;
 
   const request = fetch(`${process.env.REACT_APP_REQUEST_URI || ''}${method}`, {
     method: id ? 'PUT' : 'POST',
