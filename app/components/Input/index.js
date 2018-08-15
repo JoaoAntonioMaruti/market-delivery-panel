@@ -1,10 +1,11 @@
 import React from 'react';
-import { InputContainer, InputStyled, Label, Span } from './styles';
+import { InputContainer, InputStyled, Label, Span, ErrorContainer, Error } from './styles';
 
 const Input = (props) => {
   const {
     margin,
     label,
+    error,
     ...inputProps
   } = props
 
@@ -14,8 +15,9 @@ const Input = (props) => {
         <InputStyled
           margin={margin}
           {...inputProps}
-        />
+          />
         <Span>{ label }</Span>
+        <Error>{ error }</Error>
       </Label>
     </InputContainer>
   );

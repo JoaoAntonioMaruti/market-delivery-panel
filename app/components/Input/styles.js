@@ -37,11 +37,17 @@ const InputStyled = styled.input`
     }
   }
 `;
+const Error = styled.div`
+  color: red;
+  position: relative;
+  display: block;
+  margin-top: -20px;
+  height: 20px;
+`;
 const Label = styled.div`
   position: relative;
   display: block;
 `;
-
 const Span = styled.span`
   color: #232323;
   font: 13px Helvetica, Arial, sans-serif;
@@ -52,4 +58,4 @@ const Span = styled.span`
   transition: all 0.2s ease-in-out;
 `
 
-export { InputContainer, InputStyled, Label, Span };
+export { InputContainer, InputStyled, Label, Span, Error };
