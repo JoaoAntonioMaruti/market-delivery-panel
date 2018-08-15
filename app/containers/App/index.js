@@ -28,7 +28,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={LoginPage} />
         <Route exact path="/dashboard" component={DashboradPage} />
-        <Route path="/despesa" component={DespesaPage} />
+        <Route path="/despesa/:id?" component={DespesaPage} />
         <Route path="/usuario" component={UsuarioPage} />
         <Route path="/tag" component={TagPage} />
         <Route path="/propriedade" component={PropriedadePage} />
