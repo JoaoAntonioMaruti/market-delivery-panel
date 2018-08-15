@@ -74,7 +74,7 @@ export class LoginPage extends React.PureComponent {
               error={senhaError}
             />
             <Button title={'Entrar'} onClick={() => this.authenticate()} />
-            <Link to="/"> Ou crie sua conta aqui </Link>
+            <Link to="/usuario"> Ou crie sua conta aqui </Link>
           </LoginBox>
         </LoginContainer>
       </Container>
