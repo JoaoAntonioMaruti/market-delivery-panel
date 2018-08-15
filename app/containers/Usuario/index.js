@@ -13,7 +13,7 @@ import Input from 'components/Input';
 import { createAccount } from './actions';
 import Button from 'components/Button';
 import Errors from 'components/FormError';
-import extractMessage from './../../utils/serverErrors';
+import extractMessage from 'utils/serverErrors';
 
 /* eslint-disable react/prefer-stateless-function */
 export class Usuario extends React.PureComponent {

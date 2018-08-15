@@ -12,7 +12,9 @@ import { Container, CadastroBox, ButtonContainer } from './styles';
 import Input from 'components/Input';
 import Checkbox from 'components/Checkbox';
 import Button from 'components/Button';
+import Errors from 'components/FormError';
 import moment from 'moment';
+import extractMessage from 'utils/serverErrors';
 import { saveOrUpdateExpense, getExpense } from './actions';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -21,6 +23,7 @@ export class Despesa extends React.PureComponent {
     super(props);
     this.state = {
       status: false,
+      errors: [],
     };
   }
 
@@ -39,8 +42,6 @@ export class Despesa extends React.PureComponent {
             titulo,
             valor,
           } = response.data;
-
-          console.log(Boolean(status))
 
           this.setState({
             data: moment(data).format('YYYY-MM-DD'),
@@ -84,6 +85,8 @@ export class Despesa extends React.PureComponent {
         if (response.data) {
           return (window.location = '/dashboard');
         }
+        const errors = extractMessage(response.message);
+        return this.setState({ errors });
       });
     }
   }
@@ -99,6 +102,7 @@ export class Despesa extends React.PureComponent {
       titulo,
       descricao,
       valor,
+      errors
     } = this.state;
     return (
       <Container>
@@ -146,6 +150,7 @@ export class Despesa extends React.PureComponent {
             checked={status}
             onCheckChange={() => this.handleCheckChange()}
           />
+          <Errors messages={errors} />
           <ButtonContainer>
             <Button title={'Lançar'} onClick={() => this.submit()} />
           </ButtonContainer>
