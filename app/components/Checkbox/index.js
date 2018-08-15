@@ -4,22 +4,19 @@ import { CheckboxStyled, Label, Touchable } from './styles';
 class Checkbox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      check: props.checked
-    };
   }
 
   handleChange() {
-    this.setState({ check: !this.state.check})
+    const { onCheckChange } = this.props;
+    onCheckChange();
   }
 
   render() {
-    const { label } = this.props;
-    const { check } = this.state;
+    const { label, checked } = this.props;
 
     return (
       <Touchable onClick={() => this.handleChange()}>
-        <CheckboxStyled checked={check} />
+        <CheckboxStyled checked={checked} />
         <Label> {label} </Label>
       </Touchable>
     );
